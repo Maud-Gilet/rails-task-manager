@@ -22,9 +22,39 @@ body {
   box-shadow: 0px 1px lightgrey;
 }
 
+#new-task-link {
+  margin-top: 20px;
+
+}
+
+#new-task-link a {
+  color: white;
+  text-decoration: none;
+}
+
 #task-status {
-  padding: 15px;
+  padding: 10px;
   margin-top: 10px;
   border-bottom: 1px solid lightgrey;
 }
 
+.completed-group {
+  display: flex;
+  align-items: center;
+}
+
+#task_completed {
+  margin: 0px 0px 0px 15px;
+  border: none;
+  background: none;
+  box-shadow: none;
+
+}
+
+#edit_task_7 > div.form-group.completed-group > label {
+  margin: 0px;
+}
+
+body > p {
+  padding-top: 30px;
+}

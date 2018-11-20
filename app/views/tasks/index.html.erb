@@ -11,8 +11,12 @@
       <label class="form-check-label" for="defaultCheck1">
        <%= link_to "#{task.title}", task_url(task) %>
       </label>
+      <%= link_to task_url(task), method: :delete, data: { confirm: 'Are you sure?' }, remote: true do %>
+           <i class='far fa-trash-alt'></i>
+         <% end %>
+
     <% end %>
   </div>
 </div>
 
-<p><%=link_to "Add a new task", new_task_url %></p>
+<div class= "btn btn-primary" id='new-task-link'><%=link_to "Add a new task", new_task_url %></div>
