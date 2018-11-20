@@ -1,0 +1,18 @@
+<h1>My tasks</h1>
+
+<div class="form-check">
+  <% @tasks.each do |task| %>
+  <div>
+      <% if task.completed == true %>
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+        <% else %>
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <% end %>
+      <label class="form-check-label" for="defaultCheck1">
+       <%= link_to "#{task.title}", task_url(task) %>
+      </label>
+    <% end %>
+  </div>
+</div>
+
+<p><%=link_to "Add a new task", new_task_url %></p>
